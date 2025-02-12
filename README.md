@@ -23,8 +23,10 @@ for u in range(len(x2)): # se hace lo mismo que en el for anterior para sacar la
         y2[u+x] += x2[u]*h2[x]
  y(n):  [5, 6, 0, 15, 56, 81, 99, 78, 63, 120, 108, 0, 24, 48, 0, 0] resultado mostrado en python del primer integrante 
  y(n):  [5, 6, 5, 11, 28, 37, 32, 52, 109, 106, 67, 67, 111, 132, 83, 24] resultado mostrado en python del segundo integrante
+ 
 print ("y(n): ",y) #Da los valores de la convolucion para la señal de salida 
 print ("y(n): ",y2)# Da los valores de salida para la segunda convolucion
+
  y(n):  [5, 6, 0, 15, 56, 81, 99, 78, 63, 120, 108, 0, 24, 48, 0, 0] resultado mostrado en python del primer integrante 
  y(n):  [5, 6, 5, 11, 28, 37, 32, 52, 109, 106, 67, 67, 111, 132, 83, 24] resultado mostrado en python del segundo integrante
  
@@ -44,12 +46,14 @@ plt.ylabel('y[n]')
 plt.title('Convolución de x[n] y h[n]')
 plt.grid(True)
 plt.show()
+
 Grafica de la señal y[n] resultante de la convolucion en python para el primer integrante 
 ![image](https://github.com/user-attachments/assets/8be2bb54-658c-40c6-a004-491e5b506f59)
 Grafica de la señal y[n] resultante de la convolucion en python para el segundo integrante 
 ![image](https://github.com/user-attachments/assets/6650c969-1f7c-48b7-b9a0-53b3544ee785)
 
 #Correlacion entre dos señales dadas en la guia y su representación grafica 
+
 f=100 # frecuencia que dan ambas señales 
 Ts= 1.25e-3 #tiempo de muestreo que representa el intervalo de tiempo entre dos muestras consecutivas en la señal discreta 
 nmuestras=np.arange(0,9) #Representa que el numero de muestras este entre o y 9 sin incluir el 9 
@@ -77,6 +81,7 @@ plt.ylabel("Amplitud")
 plt.grid()
 plt.tight_layout()
 plt.show()
+
 ![image](https://github.com/user-attachments/assets/e261adf0-8f42-468e-b4d1-bcddc00553fc)
 
 plt.figure(figsize=(10, 5)) #Crea la figura con una altura y un ancho
@@ -86,11 +91,15 @@ plt.xlabel("Desplazamiento (ejes)") #Da el nombre al eje x
 plt.ylabel("Amplitud de correlación") #Da el nombre al eje y 
 plt.grid() #Dibuja la cuadricula 
 plt.show()# Muestra el grafico que representa la correlación 
+
 Representacion grafica de la correlacion entre la señal 𝑥1[𝑛𝑇𝑠] = cos(2𝜋100𝑛𝑇𝑠) y la señal 𝑥2[𝑛𝑇𝑠] = sin(2𝜋100𝑛𝑇𝑠) 
-![image](https://github.com/user-attachments/assets/2a8852a6-e162-47b1-8993-b714874dbadb)
+![image](https://github.com/user-attachments/assets/d9d6abf1-e8b8-4102-a582-7547bcc60019)
+
 print ("valores de la correlacion") #Se muestran los valores de la correlacion 
+
 for f in range (len(correlacion)): # Se utiliza un ciclo for para que valla recorriendo cada valor de la correlación y hacer lo siguiente:
     print ("-", ejes[f], "  " ,correlacion[f]) #Se va mostrando cada valor que tome la correlacion en su posicion 
+    
 valores de la correlacion dados en python 
 - -8    -2.4492935982947064e-16
 - -7    -0.7071067811865479
@@ -133,7 +142,9 @@ plt.legend()# muestras el label de los primeros 10 segundos
 plt.grid() #muestra la cuadricula en el grafico 
 plt.show() #muestra el grafico 
 Grafica de la Señal Fisiologica descargada 
+
 ![image](https://github.com/user-attachments/assets/15a87605-5ef8-4730-91b6-e84f7027520a)
+
 media=np.mean(Tiempo) #Se calcula la media de la señal fisiologica mediante la funcion
 mediana=np.median(Tiempo) #Se calcula la median de la señal mediante la funcion
 varianza=np.var(Tiempo) #Se calcula la varianza de la señal mediante la funcion 
@@ -145,13 +156,20 @@ print("la varianza de la señal es: ",varianza) #Muestra la varianza de la seña
 print("la desviacion estandar de la señal es: ",desviacion) #Muestra la desviacion de la señal calculada anteriormente 
 print("el coeficiente de variacion es: ",coeficiente_variacion) #Muestra el coeficiente de variaacion de la señal calculada anteriormente
 print("la frecuencia de muestreo es: ",fs)
+
 VALORES DADOS EN PYTHON
 la media de la señal es:  125.22000000000001
+
 la mediana de la señal es:  125.22
+
 la varianza de la señal es:  5226.703670000002
+
 la desviacion estandar de la señal es:  72.29594504534816
+
 el coeficiente de variacion es:  57.735142186031105
+
 la frecuencia de muestreo es:  2000
+
 Histograma
 plt.figure(figsize=(10, 5)) #crea un grafico y se le da unas medidas a la imagen 
 plt.hist(conversion, bins=60, color='purple', alpha=0.7) #dibuja el histograma el cual contiene la variable conversion el cual contiene los valores de la señal, el numero de columnas que se quieren en el histograma, el color y ajusta la opacidad de las barras
@@ -160,7 +178,8 @@ plt.xlabel("Amplitud (mV)") #nombre del eje x
 plt.ylabel("Frecuencia (Hz)") #nombre del eje y
 plt.grid(True) #muestra la cuadricula 
 plt.show() #muestra el grafico 
-Hisograma de la señal fisiologica 
+Hisograma de la señal fisiologica
+
 ![image](https://github.com/user-attachments/assets/3bb5c4cb-f53d-4181-b537-62b85891c8c9)
 ordenar_datos=np.sort(conversion)#se ordenan los datos de la señal lamcenados en conversion de menor a mayor 
 funcion=np.arange(1,len(ordenar_datos)+1)/len (ordenar_datos) #se genera un arreglo con numeros desde el 1 al total de datos y se divide entre el numero de datos, esto indica la fracion del total de datos que son menores o iguales a cada valor en el arreglo ordenado 
