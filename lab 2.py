@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Feb  7 21:18:19 2025
-
-@author: HP RY5
-"""
+Laboratorio #2 Convolución y Correlación 
 import matplotlib.pyplot as plt # Libreria para graficar
 import numpy as np #libreria para los datos estadistcos y operaciones matematicas
 import wfdb # Libreria para que lea los archivos .hea y .dat
