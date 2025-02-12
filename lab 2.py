@@ -141,6 +141,9 @@ print("la varianza de la señal es: ",varianza) #Muestra la varianza de la seña
 print("la desviacion estandar de la señal es: ",desviacion) #Muestra la desviacion de la señal calculada anteriormente 
 print("el coeficiente de variacion es: ",coeficiente_variacion) #Muestra el coeficiente de variaacion de la señal calculada anteriormente
 print("la frecuencia de muestreo es: ",fs)
+#Descripcion de la señal 
+#Es una señal discreta o discontinua, pues presenta saltos abruptos en su amplitud,  Específicamente, parece ser una señal periódica, pues el patrón se repite regularmente después de los 6 segundos,  Después de los 6 segundos, presenta una forma de onda rectangular o cuadrada
+#Está representada en el dominio del tiempo (eje X en segundos), La amplitud está medida en milivoltios (mV) en el eje Y
 
 ejefrecuencias=np.fft.fftfreq(muestras,d=1/fs) #Se calcula la frecuencia del eje en hz para la transformada de Fourier que son negaticas y positivas 
 transformada= fft(conversion) #Se usa esa funcion para calcular la transformada de fourier de la señal 
