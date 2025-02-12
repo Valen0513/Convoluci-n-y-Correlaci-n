@@ -1,5 +1,5 @@
 y[n] resultante de la convoluvion entre x[n] y h[n] usando sumatorias a mano
-![Uploading Imagen de WhatsApp 2025-02-11 a las 22.43.20_d91b26e3.jpg…]()
+![Imagen de WhatsApp 2025-02-11 a las 22 43 20_a146d2b3](https://github.com/user-attachments/assets/45682e9a-7949-4195-a362-0a02ce55f24a)
 Grafica de la señal y[n] resultante de la convolucion en python para el primer integrante 
 ![image](https://github.com/user-attachments/assets/8be2bb54-658c-40c6-a004-491e5b506f59)
 Grafica de la señal y[n] resultante de la convolucion en python para el segundo integrante 
